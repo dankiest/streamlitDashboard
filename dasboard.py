@@ -1,9 +1,8 @@
 import pandas as pd
 from ydata_profiling import ProfileReport
 
+df = pd.read_csv("RECLAMEAQUI_NAGEM.csv", encoding='latin-1')
 
-df = pd.read_csv("278k_labelled_uri.csv", na_values=['='])
+profile = ProfileReport(df, title='Most streamed Spotify Songs of 2023')
 
-profile = ProfileReport(df, title='Emotion Labeled Spotify Songs')
-
-profile.to_file('278k_labelled_uri.csv.html')
+profile.to_file('RECLAMEAQUI_NAGEM.html')
